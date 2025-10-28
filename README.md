@@ -41,7 +41,33 @@ The database structure consists of five tables: FactLoan, DimClient, DimClientHi
 
 ## Executive Summary
 
-Nova Bank processed 32,581 loan applications across the USA, UK, and Canada, totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income.
+Nova Bank processed 32,851 loan applications across the USA, UK, and Canada, totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income.
+
+### Portfolio Health
+
+- **Overall Default Rate**: 21.82%  
+- **Non-Defaulted Loans**: 78.18%  
+This indicates that roughly 4 in 5 borrowers repay their loans, but nearly 1 in 5 defaults — a meaningful risk exposure.
+
+### Why People Borrow — and How They Repay
+
+Borrowers take loans for a range of reasons. Here's how repayment varies by loan intent:
+
+| Loan Purpose         | % of Defaults | % of Non-Defaults | Insight |
+|----------------------|----------------|--------------------|---------|
+| Medical              | 22.81%         | 17.47%             | Highest default rate — medical loans carry the most risk. |
+| Debt Consolidation   | 20.96%         | 14.61%             | Common reason for borrowing, but repayment is below average. |
+| Education            | 15.63%         | 20.97%             | Strong repayment — education borrowers are more reliable. |
+| Personal             | 15.45%         | 17.36%             | Mid-range risk, slightly better than average. |
+| Venture              | 11.92%         | 19.13%             | High repayment — venture loans show strong performance. |
+| Home Improvement     | 13.24%         | 10.46%             | Lower volume, moderate risk. |
+
+### Key Takeaways
+
+- **Top reasons for borrowing**: Debt consolidation, education, and medical expenses.  
+- **Highest risk**: Medical loans — borrowers may be financially strained or uninsured.  
+- **Best repayment**: Education and venture loans — likely tied to long-term income potential.  
+- These insights support Nova Bank’s goal to align loan policies with borrower intent and improve risk-adjusted returns.
 
 ### Regional Risk Highlights
 
