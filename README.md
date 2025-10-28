@@ -11,4 +11,28 @@ As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan a
 - Explore how loan size, income, interest rates, and repayment terms affect risk  
 - Assess the impact of employment type, home ownership, and credit history  
 - Compare risk patterns across countries (USA, UK, Canada)  
-- Recommend policy adjustments to improve lending fairness and reduce exposure  
+- Recommend policy adjustments to improve lending fairness and reduce exposure
+
+## Nova Bank Key Metrics
+
+**Default Risk Trends**  
+Tracking the proportion of loans that default across borrower segments, loan types, and time periods to identify high-risk patterns and early warning signals.
+
+**Loan Portfolio Performance**  
+Analyzing loan amounts, interest rates, repayment terms, and total loan cost to assess profitability and exposure across different loan grades and purposes.
+
+**Borrower Profile Insights**  
+Evaluating demographic and financial indicators—such as age, income, employment type, and home ownership—to understand which borrower groups are more likely to repay or default.
+
+**Credit History Evaluation**  
+Measuring the impact of credit history length, past delinquencies, open accounts, and credit utilization on loan outcomes to refine risk scoring models.
+
+**Geographic Risk Distribution**  
+Comparing default rates and borrower behavior across the USA, UK, and Canada to uncover regional lending risks and opportunities for policy adjustment.
+
+**Affordability Ratios**  
+Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment capacity and flag over-leveraged applicants.
+
+**Loan Grade and Term Analysis**  
+Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
+
