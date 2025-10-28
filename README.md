@@ -39,5 +39,24 @@ Identifying which loan grades and repayment terms correlate with safer lending o
 ## Dataset Structure 
 The database structure consists of five tables: FactLoan, DimClient, DimClientHistory, DimLoanDetails, and DimLocation, with a total of 32,581 records in the central fact table.
 
+## Executive Summary
+
+Nova Bank processed 32,581 loan applications across the USA, UK, and Canada, totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income.
+
+### Regional Risk Highlights
+
+### --- INSERT VISUAL HERE
+
+- **UK**: 10,944 applications, 2,378 defaults (22%). Scotland and Manchester showed slightly higher risk than other regions.
+- **USA**: 10,852 applications, 2,372 defaults (22%). California and Texas had the most defaults, especially in cities like Dallas and Los Angeles.
+- **Canada**: 10,785 applications, 2,358 defaults (22%). Vancouver had the highest default rate across all cities.
+
+### Key Takeaways
+
+- Default rates are consistent across countries, averaging around 22%.
+- Urban centers tend to carry more risk.
+- Nova Bank may need to adjust lending policies in high-risk cities to reduce exposure.
+
+
 
 
