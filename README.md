@@ -36,7 +36,7 @@ Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment
 **Loan Grade and Term Analysis**  
 Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
 
-## Dataset Structure and ERD (Entity relationship diagram)
+## Dataset Structure 
 The database structure consists of five tables: FactLoan, DimClient, DimClientHistory, DimLoanDetails, and DimLocation, with a total of 32,581 records in the central fact table.
 
 
