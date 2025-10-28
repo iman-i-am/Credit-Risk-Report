@@ -83,6 +83,34 @@ Borrowers take loans for a range of reasons. Here's how repayment varies by loan
 - Urban centers tend to carry more risk.
 - Nova Bank may need to adjust lending policies in high-risk cities to reduce exposure.
 
+## Borrower Profile Insights  
+**Do gender, age, and marital status affect loan repayment?**
+
+### Gender  
+- **Female applicants**: 49.72% of total loans, 3,580 defaults  
+- **Male applicants**: 50.28% of total loans, 3,560 defaults  
+**Insight**: Default rates are nearly identical across genders, suggesting gender is not a strong predictor of repayment behavior.
+
+### Age Class  
+- **Young Adults (20s–30s)**: Largest group for both genders (~50% of loans), with ~1,700 defaults each  
+- **Youth (18–25)**: Second largest group, with ~1,400 defaults per gender  
+- **Older age groups** (Adult, Middle-aged, Senior, Elderly): Combined share <15%, with lower default volumes  
+**Insight**: Younger borrowers (Youth and Young Adults) account for the majority of defaults due to volume, but not necessarily higher risk. Older borrowers show lower default counts, likely due to fewer applications.
+
+### Marital Status  
+Across all age groups and genders:
+- **Single borrowers** consistently represent ~50% of applications and defaults  
+- **Married borrowers** show slightly lower default rates relative to their application share  
+- **Divorced and Widowed** applicants have smaller volumes but slightly elevated default ratios in some age brackets  
+**Insight**: Being single may correlate with higher default risk, especially among younger applicants. Married borrowers tend to repay more reliably.
+
+### Key Takeaways  
+- **Gender is neutral** in predicting default risk  
+- **Age matters** — younger borrowers dominate both applications and defaults  
+- **Marital status adds nuance** — single borrowers show higher default volumes, while married borrowers are more stable  
+These insights support Nova Bank’s goal to identify borrower groups more or less likely to default and refine risk scoring models accordingly.
+
+
 
 
 
