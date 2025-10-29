@@ -221,6 +221,26 @@ Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to bot
 - **Mortgage holders and homeowners are more stable**.  
 - Nova Bank should be cautious with renters and check debt ratios closely before approving loans.
 
+## Loan Grade & Term Impact  
+**How loan quality and repayment duration influence default risk**
+
+### Key Patterns
+
+- **Grade A** loans are the safest across all terms — default rates stay around **10%**.  
+- **Grades B and C** show moderate risk, with default rates between **15–22%**.  
+- **Grades D to G** are high-risk:
+  - **Grade D** defaults reach **60%+**  
+  - **Grade G** defaults hit **100%** across all terms
+
+- **Shorter terms (12–36 months)** tend to have slightly lower default rates, especially in riskier grades.  
+- **Longer terms (60 months)** show higher risk in lower grades (D–G).
+
+### Key Takeaways
+
+- **Grade A loans are the most reliable**, regardless of term.  
+- **Default risk rises sharply** from Grade D onward — especially for longer terms.  
+- **Optimum term**: 12–36 months for riskier grades; longer terms are safer only for top-grade loans.  
+Nova Bank should prioritize Grade A–C loans and apply stricter checks for longer-term loans in lower grades.
 
 
 
