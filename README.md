@@ -110,6 +110,34 @@ Across all age groups and genders:
 - **Marital status adds nuance** — single borrowers show higher default volumes, while married borrowers are more stable  
 These insights support Nova Bank’s goal to identify borrower groups more or less likely to default and refine risk scoring models accordingly.
 
+## Borrower Risk Drivers  
+**How education, employment, and home ownership affect loan repayment**
+
+### Education Level  
+- **High School**: 13,185 loans, 2,909 defaults (22%)  
+- **Bachelor’s**: 11,390 loans, 2,439 defaults (21%)  
+- **Master’s**: 6,508 loans, 1,443 defaults (22%)  
+- **PhD**: 1,498 loans, 317 defaults (21%)  
+**Insight**: Default rates are consistent across education levels, but high school graduates represent the largest volume of defaults due to higher application counts.
+
+### Employment Type  
+Across all education levels:
+- **Unemployed borrowers** show the highest default rates relative to volume.  
+- **Self-employed and part-time workers** also carry elevated risk.  
+- **Full-time employees** have the highest loan volumes but slightly lower default ratios.  
+**Insight**: Employment stability is a key factor — full-time work correlates with better repayment, while unemployment and gig-based income increase risk.
+
+### Home Ownership  
+- **Renters** consistently show the highest default counts across all groups.  
+- **Mortgage holders** have moderate risk.  
+- **Homeowners (own outright)** show the lowest default rates.  
+**Insight**: Renters are the riskiest group, likely due to lower asset security and financial volatility.
+
+### Key Takeaways  
+- **Default risk is driven more by employment and housing status than education level.**  
+- **Renters and unemployed borrowers** are the most vulnerable segments.  
+- Nova Bank should consider stricter affordability checks and risk scoring adjustments for these profiles.
+
 
 
 
