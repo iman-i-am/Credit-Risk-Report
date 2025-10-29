@@ -257,6 +257,25 @@ Nova Bank should prioritize Grade A–C loans and apply stricter checks for long
 - **Past delinquencies are consistent**, but younger groups carry more risk due to volume.  
 - Nova Bank should apply tighter checks for younger applicants and consider credit maturity when assessing risk.
 
+## Customer Details Table
+**Interactive view of client-level loan data with default status filtering**
+
+Nova Bank’s dashboard includes a dynamic customer details table that allows users to:
+
+View individual client records, including loan status, income, credit history, and account behavior
+
+Filter between “Defaulted” and “Non-Defaulted” customers using a slicer.
+
+Visual cues:
+
+Defaulted customers are highlighted in red
+
+Non-defaulted customers are highlighted in green
+
+Conditional formatting is applied to the Client ID column for quick identification
+
+This feature supports deeper analysis of borrower behavior and improves decision-making by surfacing high-risk profiles directly within the report.
+
 
 
 
