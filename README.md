@@ -138,6 +138,23 @@ Across all education levels:
 - **Renters and unemployed borrowers** are the most vulnerable segments.  
 - Nova Bank should consider stricter affordability checks and risk scoring adjustments for these profiles.
 
+## Loan Amount vs Other Debt  
+**How loan size and existing debt levels affect repayment**
+
+Most loan applications fall between **$0–$14,000**, with a peak at **$4,000**. Borrowers in this range tend to have **low to moderate other debt**, and their default rates are relatively low.
+
+- **Moderate debt group** at $4,000: 3,354 applications, average other debt $10,028, default rate **14%**  
+- **Low debt group** at $4,000: 1,547 applications, average other debt $3,273, default rate **32%**  
+- **High debt group** at $4,000: 359 applications, average other debt $28,025, default rate **7%**
+
+At higher loan amounts ($16,000–$35,000), applications drop, but **default rates increase**, especially for borrowers with **moderate debt**.
+
+- Example: At $32,000, moderate debt group has a **60% default rate**
+
+### Key Takeaways  
+- Most borrowers request smaller loans and have manageable debt.  
+- Borrowers with **moderate debt** become riskier as loan amounts increase.  
+- Nova Bank should watch for high loan requests from moderate-debt applicants — they’re more likely to default.
 
 
 
