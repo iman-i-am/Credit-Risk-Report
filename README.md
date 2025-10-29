@@ -242,6 +242,22 @@ Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to bot
 - **Optimum term**: 12–36 months for riskier grades; longer terms are safer only for top-grade loans.  
 Nova Bank should prioritize Grade A–C loans and apply stricter checks for longer-term loans in lower grades.
 
+## Account Behavior by Age  
+**Do past delinquencies and open accounts influence loan defaults?**
+
+### Key Patterns
+
+- **Younger age groups (18–34)** have the most defaults — over 6,000 combined — and slightly fewer open accounts.  
+- **Delinquency rates** are similar across all age groups (around 0.50), except for ages 55–64, which show fewer past issues (0.37).  
+- **Older borrowers (55+)** have fewer defaults and slightly more open accounts, suggesting better credit behavior.
+
+### Key Takeaways
+
+- **Age matters** — younger borrowers default more, likely due to limited credit history and financial instability.  
+- **Past delinquencies are consistent**, but younger groups carry more risk due to volume.  
+- Nova Bank should apply tighter checks for younger applicants and consider credit maturity when assessing risk.
+
+
 
 
 
