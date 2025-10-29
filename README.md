@@ -156,6 +156,24 @@ At higher loan amounts ($16,000–$35,000), applications drop, but **default rat
 - Borrowers with **moderate debt** become riskier as loan amounts increase.  
 - Nova Bank should watch for high loan requests from moderate-debt applicants — they’re more likely to default.
 
+## Employment Tenure & Income  
+**How job experience and income levels impact loan repayment**
+
+### Key Patterns
+
+- **Default risk drops** as employment length increases — from **27%** for those with less than 2 years of experience to **13.4%** for those with 16–19 years.  
+- **Median income rises** steadily with tenure, peaking at **$70,000** for borrowers with 11–19 years of experience.  
+- **Exception**: Borrowers with **20+ years** of experience show a higher default rate (**24.5%**) despite earning nearly as much ($68,608).
+
+### Key Takeaways
+
+- **Stable employment = lower risk**: Borrowers with 6–19 years of experience are the most reliable.  
+- **Newer employees (0–2 years)** are the riskiest group — likely due to income instability.  
+- **Unexpected risk** among 20+ year workers may reflect retirement transitions, fixed incomes, or late-career financial strain.
+
+Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to both early-career and late-career applicants.
+
+
 
 
 
