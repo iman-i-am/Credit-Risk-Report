@@ -1,319 +1,159 @@
 # Credit Risk Analytics for Smarter Lending Decisions
 
 ## Project Overview  
-
 This project analyzes loan application data from Nova Bank to uncover patterns in borrower behavior and default risk across the USA, UK, and Canada. The goal is to support fair, data-driven lending policies that balance accessibility with financial protection.
 
 As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan applications using Python in Google Colab, addressing missing values, outliers, and feature engineering. The cleaned dataset was then exported to Excel and modeled in Power BI using a star-schema structure for dashboard development. This semantic model enables executive-level insights into borrower behavior, loan performance, and geographic risk segmentation.
 
-### Business Objectives
+## Business Objectives  
 - Identify borrower groups more or less likely to default  
 - Explore how loan size, income, interest rates, and repayment terms affect risk  
 - Assess the impact of employment type, home ownership, and credit history  
 - Compare risk patterns across countries (USA, UK, Canada)  
 - Recommend policy adjustments to improve lending fairness and reduce exposure
 
-## Nova Bank Key Metrics
+## Nova Bank Key Metrics  
+- **Default Risk Trends**: Tracking the proportion of loans that default across borrower segments, loan types, and time periods to identify high-risk patterns and early warning signals.  
+- **Loan Portfolio Performance**: Analyzing loan amounts, interest rates, repayment terms, and total loan cost to assess profitability and exposure across different loan grades and purposes.  
+- **Borrower Profile Insights**: Evaluating demographic and financial indicators—such as age, income, employment type, and home ownership—to understand which borrower groups are more likely to repay or default.  
+- **Credit History Evaluation**: Measuring the impact of credit history length, past delinquencies, open accounts, and credit utilization on loan outcomes to refine risk scoring models.  
+- **Geographic Risk Distribution**: Comparing default rates and borrower behavior across the USA, UK, and Canada to uncover regional lending risks and opportunities for policy adjustment.  
+- **Affordability Ratios**: Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment capacity and flag over-leveraged applicants.  
+- **Loan Grade and Term Analysis**: Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
 
-**Default Risk Trends**  
-Tracking the proportion of loans that default across borrower segments, loan types, and time periods to identify high-risk patterns and early warning signals.
+## Dataset Structure  
+The database structure consists of five tables:  
+- **FactLoan** (central fact table with 32,581 records)  
+- **DimClient**  
+- **DimClientHistory**  
+- **DimLoanDetails**  
+- **DimLocation**  
 
-**Loan Portfolio Performance**  
-Analyzing loan amounts, interest rates, repayment terms, and total loan cost to assess profitability and exposure across different loan grades and purposes.
+This star-schema model supports efficient slicing of borrower behavior, loan characteristics, and geographic trends.
 
-**Borrower Profile Insights**  
-Evaluating demographic and financial indicators—such as age, income, employment type, and home ownership—to understand which borrower groups are more likely to repay or default.
+---
 
-**Credit History Evaluation**  
-Measuring the impact of credit history length, past delinquencies, open accounts, and credit utilization on loan outcomes to refine risk scoring models.
+## Executive Summary  
+Nova Bank processed 32,851 loan applications totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income. While 78% of loans were repaid, 22% defaulted — a meaningful exposure that warrants targeted policy adjustments.
 
-**Geographic Risk Distribution**  
-Comparing default rates and borrower behavior across the USA, UK, and Canada to uncover regional lending risks and opportunities for policy adjustment.
+This report explores the drivers of default risk across borrower demographics, loan structure, credit history, and regional patterns. It also highlights actionable strategies to improve lending decisions and reduce risk exposure.
 
-**Affordability Ratios**  
-Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment capacity and flag over-leveraged applicants.
+---
 
-**Loan Grade and Term Analysis**  
-Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
+## Key Findings
 
-## Dataset Structure 
-The database structure consists of five tables: FactLoan, DimClient, DimClientHistory, DimLoanDetails, and DimLocation, with a total of 32,581 records in the central fact table.
-
-## Executive Summary
-
-Nova Bank processed 32,851 loan applications across the USA, UK, and Canada, totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income.
-
-### Portfolio Health
-
-- **Overall Default Rate**: 21.82%  
-- **Non-Defaulted Loans**: 78.18%  
-This indicates that roughly 4 in 5 borrowers repay their loans, but nearly 1 in 5 defaults — a meaningful risk exposure.
-
-### Why People Borrow — and How They Repay
-
-Borrowers take loans for a range of reasons. Here's how repayment varies by loan intent:
+### 1. Loan Intent & Repayment Behavior  
+Borrowers take loans for various reasons, but repayment behavior varies significantly by intent:
 
 | Loan Purpose         | % of Defaults | % of Non-Defaults | Insight |
 |----------------------|----------------|--------------------|---------|
-| Medical              | 22.81%         | 17.47%             | Highest default rate — medical loans carry the most risk. |
+| Medical              | 22.81%         | 17.47%             | Highest defaulted — medical loans carry the most risk. |
 | Debt Consolidation   | 20.96%         | 14.61%             | Common reason for borrowing, but repayment is below average. |
 | Education            | 15.63%         | 20.97%             | Strong repayment — education borrowers are more reliable. |
 | Personal             | 15.45%         | 17.36%             | Mid-range risk, slightly better than average. |
 | Venture              | 11.92%         | 19.13%             | High repayment — venture loans show strong performance. |
 | Home Improvement     | 13.24%         | 10.46%             | Lower volume, moderate risk. |
 
-### Key Takeaways
+**Takeaway**: Education and venture loans are the most promising segments. Medical and debt consolidation loans require tighter controls.
 
-- **Top reasons for borrowing**: Debt consolidation, education, and medical expenses.  
-- **Highest risk**: Medical loans — borrowers may be financially strained or uninsured.  
-- **Best repayment**: Education and venture loans — likely tied to long-term income potential.  
-- These insights support Nova Bank’s goal to align loan policies with borrower intent and improve risk-adjusted returns.
+---
 
-### Regional Risk Highlights
+### 2. Regional Risk Distribution  
+- **UK**: 10,944 applications, 2,378 defaults (22%). Scotland and Manchester show slightly higher risk.  
+- **USA**: 10,852 applications, 2,372 defaults (22%). California and Texas lead in defaults.  
+- **Canada**: 10,785 applications, 2,358 defaults (22%). Vancouver has the highest default rate.
 
-### --- INSERT VISUAL HERE
+**Takeaway**: Default rates are consistent across countries, but urban centers carry more risk. Regional lending policies may need adjustment.
 
-- **UK**: 10,944 applications, 2,378 defaults (22%). Scotland and Manchester showed slightly higher risk than other regions.
-- **USA**: 10,852 applications, 2,372 defaults (22%). California and Texas had the most defaults, especially in cities like Dallas and Los Angeles.
-- **Canada**: 10,785 applications, 2,358 defaults (22%). Vancouver had the highest default rate across all cities.
+---
 
-### Key Takeaways
+### 3. Borrower Demographics  
+- **Gender**: Default rates are nearly identical across male and female applicants.  
+- **Age**: Younger borrowers (18–35) dominate both applications and defaults. Older borrowers show lower default counts.  
+- **Marital Status**: Single borrowers show higher default volumes, while married borrowers are more stable.
 
-- Default rates are consistent across countries, averaging around 22%.
-- Urban centers tend to carry more risk.
-- Nova Bank may need to adjust lending policies in high-risk cities to reduce exposure.
+---
 
-## Borrower Profile Insights  
-**Do gender, age, and marital status affect loan repayment?**
+### 4. Employment Tenure & Income  
+- Default risk drops as employment length increases — from 27% for those with less than 2 years to 13.4% for those with 16–19 years.  
+- Median income rises steadily with tenure, peaking at $70,000 for borrowers with 11–19 years of experience.  
+- Borrowers with 20+ years of experience show a higher default rate (24.5%) despite earning nearly as much.
 
-### Gender  
-- **Female applicants**: 49.72% of total loans, 3,580 defaults  
-- **Male applicants**: 50.28% of total loans, 3,560 defaults  
-**Insight**: Default rates are nearly identical across genders, suggesting gender is not a strong predictor of repayment behavior.
+---
 
-### Age Class  
-- **Young Adults (20s–30s)**: Largest group for both genders (~50% of loans), with ~1,700 defaults each  
-- **Youth (18–25)**: Second largest group, with ~1,400 defaults per gender  
-- **Older age groups** (Adult, Middle-aged, Senior, Elderly): Combined share <15%, with lower default volumes  
-**Insight**: Younger borrowers (Youth and Young Adults) account for the majority of defaults due to volume, but not necessarily higher risk. Older borrowers show lower default counts, likely due to fewer applications.
+### 5. Credit History & Loan-to-Income Ratio  
+- Youth (18–25): Shortest credit history (2.99 years), highest LTI ratio (0.18), highest default volume.  
+- Older borrowers (46+): Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16), lowest defaults.
 
-### Marital Status  
-Across all age groups and genders:
-- **Single borrowers** consistently represent ~50% of applications and defaults  
-- **Married borrowers** show slightly lower default rates relative to their application share  
-- **Divorced and Widowed** applicants have smaller volumes but slightly elevated default ratios in some age brackets  
-**Insight**: Being single may correlate with higher default risk, especially among younger applicants. Married borrowers tend to repay more reliably.
+---
 
-### Key Takeaways  
-- **Gender is neutral** in predicting default risk  
-- **Age matters** — younger borrowers dominate both applications and defaults  
-- **Marital status adds nuance** — single borrowers show higher default volumes, while married borrowers are more stable  
-These insights support Nova Bank’s goal to identify borrower groups more or less likely to default and refine risk scoring models accordingly.
+### 6. Home Ownership & Affordability  
+- Renters: Highest default count (5,192), highest loan-to-income and debt-to-income ratios.  
+- Mortgage holders: Lower ratios and fewer defaults.  
+- Homeowners (own outright): Small group, lowest default rates.
 
-## Borrower Risk Drivers  
-**How education, employment, and home ownership affect loan repayment**
+---
 
-### Education Level  
-- **High School**: 13,185 loans, 2,909 defaults (22%)  
-- **Bachelor’s**: 11,390 loans, 2,439 defaults (21%)  
-- **Master’s**: 6,508 loans, 1,443 defaults (22%)  
-- **PhD**: 1,498 loans, 317 defaults (21%)  
-**Insight**: Default rates are consistent across education levels, but high school graduates represent the largest volume of defaults due to higher application counts.
+### 7. Loan Grade & Term  
+- Grade A loans are the safest across all terms — default rates stay around 10%.  
+- Grades B and C show moderate risk (15–22%).  
+- Grades D to G are high-risk: Grade D defaults reach 60%+, Grade G defaults hit 100%.  
+- Shorter terms (12–36 months) tend to have slightly lower default rates, especially in riskier grades.
 
-### Employment Type  
-Across all education levels:
-- **Unemployed borrowers** show the highest default rates relative to volume.  
-- **Self-employed and part-time workers** also carry elevated risk.  
-- **Full-time employees** have the highest loan volumes but slightly lower default ratios.  
-**Insight**: Employment stability is a key factor — full-time work correlates with better repayment, while unemployment and gig-based income increase risk.
+---
 
-### Home Ownership  
-- **Renters** consistently show the highest default counts across all groups.  
-- **Mortgage holders** have moderate risk.  
-- **Homeowners (own outright)** show the lowest default rates.  
-**Insight**: Renters are the riskiest group, likely due to lower asset security and financial volatility.
+### 8. Account Behavior  
+- Younger age groups (18–34) have the most defaults and slightly fewer open accounts.  
+- Delinquency rates are similar across all age groups (~0.50), except for ages 55–64 (0.37).  
+- Older borrowers (55+) have fewer defaults and slightly more open accounts.
 
-### Key Takeaways  
-- **Default risk is driven more by employment and housing status than education level.**  
-- **Renters and unemployed borrowers** are the most vulnerable segments.  
-- Nova Bank should consider stricter affordability checks and risk scoring adjustments for these profiles.
+---
 
-## Loan Amount vs Other Debt  
-**How loan size and existing debt levels affect repayment**
+### 9. Dashboard Enhancements  
+- Customer Details Table includes a default status flag with conditional formatting and slicer-based filtering.  
+- Defaulted customers are highlighted in red; non-defaulted in green.  
+- Enables deeper analysis of borrower behavior and supports decision-making.
 
-Most loan applications fall between **$0–$14,000**, with a peak at **$4,000**. Borrowers in this range tend to have **low to moderate other debt**, and their default rates are relatively low.
+---
 
-- **Moderate debt group** at $4,000: 3,354 applications, average other debt $10,028, default rate **14%**  
-- **Low debt group** at $4,000: 1,547 applications, average other debt $3,273, default rate **32%**  
-- **High debt group** at $4,000: 359 applications, average other debt $28,025, default rate **7%**
-
-At higher loan amounts ($16,000–$35,000), applications drop, but **default rates increase**, especially for borrowers with **moderate debt**.
-
-- Example: At $32,000, moderate debt group has a **60% default rate**
-
-### Key Takeaways  
-- Most borrowers request smaller loans and have manageable debt.  
-- Borrowers with **moderate debt** become riskier as loan amounts increase.  
-- Nova Bank should watch for high loan requests from moderate-debt applicants — they’re more likely to default.
-
-## Employment Tenure & Income  
-**How job experience and income levels impact loan repayment**
-
-### Key Patterns
-
-- **Default risk drops** as employment length increases — from **27%** for those with less than 2 years of experience to **13.4%** for those with 16–19 years.  
-- **Median income rises** steadily with tenure, peaking at **$70,000** for borrowers with 11–19 years of experience.  
-- **Exception**: Borrowers with **20+ years** of experience show a higher default rate (**24.5%**) despite earning nearly as much ($68,608).
-
-### Key Takeaways
-
-- **Stable employment = lower risk**: Borrowers with 6–19 years of experience are the most reliable.  
-- **Newer employees (0–2 years)** are the riskiest group — likely due to income instability.  
-- **Unexpected risk** among 20+ year workers may reflect retirement transitions, fixed incomes, or late-career financial strain.
-
-Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to both early-career and late-career applicants.
-
-## Loan Risk by Age, Credit History & LTI  
-**How borrower age, credit history, and loan-to-income ratio affect default risk**
-
-### Key Patterns
-
-- **Youth (18–25)**:  
-  - Shortest credit history (2.99 years)  
-  - Highest LTI ratio (0.18)  
-  - Largest group: 12,315 applications, 2,860 defaults  
-  - **Insight**: High volume and high risk — younger borrowers are more likely to default.
-
-- **Young Adults (26–35)**:  
-  - Moderate credit history (5.97 years), LTI ratio 0.17  
-  - 16,185 applications, 3,393 defaults  
-  - **Insight**: Still high risk due to volume, but slightly better credit behavior.
-
-- **Adults (36–45)**:  
-  - Stronger credit history (12.73 years), lower LTI (0.16)  
-  - 3,326 applications, 684 defaults  
-  - **Insight**: More stable — lower default rate despite fewer applications.
-
-- **Older Age Groups (46+)**:  
-  - Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16)  
-  - Very few applications, very low defaults  
-  - **Insight**: Reliable borrowers, but small segment.
-
-### Key Takeaways
-
-- **Younger borrowers are the riskiest**, due to short credit history and higher LTI ratios.  
-- **Older borrowers are more stable**, with longer credit histories and lower default rates.  
-- Nova Bank should apply stricter checks for youth and young adult segments, and consider prioritizing mid-age applicants for safer lending.
-
-## Loan Risk by Home Ownership  
-**How income ratios affect repayment across housing types**
-
-### Key Patterns
-
-- **Renters**: Highest default count (5,192). They borrow more relative to income and carry more debt.  
-- **Mortgage holders**: Lower loan and debt ratios, with fewer defaults (1,690).  
-- **Homeowners (own outright)**: Small group, low defaults (193).  
-- **Other housing**: Very small group, but defaults are high for their size.
-
-### Key Takeaways
-
-- **Renters are the riskiest group** — they borrow more and default more.  
-- **Mortgage holders and homeowners are more stable**.  
-- Nova Bank should be cautious with renters and check debt ratios closely before approving loans.
-
-## Loan Grade & Term Impact  
-**How loan quality and repayment duration influence default risk**
-
-### Key Patterns
-
-- **Grade A** loans are the safest across all terms — default rates stay around **10%**.  
-- **Grades B and C** show moderate risk, with default rates between **15–22%**.  
-- **Grades D to G** are high-risk:
-  - **Grade D** defaults reach **60%+**  
-  - **Grade G** defaults hit **100%** across all terms
-
-- **Shorter terms (12–36 months)** tend to have slightly lower default rates, especially in riskier grades.  
-- **Longer terms (60 months)** show higher risk in lower grades (D–G).
-
-### Key Takeaways
-
-- **Grade A loans are the most reliable**, regardless of term.  
-- **Default risk rises sharply** from Grade D onward — especially for longer terms.  
-- **Optimum term**: 12–36 months for riskier grades; longer terms are safer only for top-grade loans.  
-Nova Bank should prioritize Grade A–C loans and apply stricter checks for longer-term loans in lower grades.
-
-## Account Behavior by Age  
-**Do past delinquencies and open accounts influence loan defaults?**
-
-### Key Patterns
-
-- **Younger age groups (18–34)** have the most defaults — over 6,000 combined — and slightly fewer open accounts.  
-- **Delinquency rates** are similar across all age groups (around 0.50), except for ages 55–64, which show fewer past issues (0.37).  
-- **Older borrowers (55+)** have fewer defaults and slightly more open accounts, suggesting better credit behavior.
-
-### Key Takeaways
-
-- **Age matters** — younger borrowers default more, likely due to limited credit history and financial instability.  
-- **Past delinquencies are consistent**, but younger groups carry more risk due to volume.  
-- Nova Bank should apply tighter checks for younger applicants and consider credit maturity when assessing risk.
-
-## Customer Details Table
-**Interactive view of client-level loan data with default status filtering**
-
-Nova Bank’s dashboard includes a dynamic customer details table that allows users to:
-
-View individual client records, including loan status, income, credit history, and account behavior
-
-Filter between “Defaulted” and “Non-Defaulted” customers using a slicer.
-
-Visual cues:
-
-Defaulted customers are highlighted in red
-
-Non-defaulted customers are highlighted in green
-
-Conditional formatting is applied to the Client ID column for quick identification
-
-This feature supports deeper analysis of borrower behavior and improves decision-making by surfacing high-risk profiles directly within the report.
-
-## Recommendations  
-Based on the uncovered insights, here are actionable steps Nova Bank can take to improve credit risk management and lending strategy.
+## Recommendations
 
 ### Portfolio Health & Loan Intent  
-- Prioritize education and venture loans: These show the strongest repayment behavior and align with long-term income potential.  
-- Reassess medical and debt consolidation loans: These categories have the highest default rates and may require stricter approval criteria or revised interest terms.  
-- Incorporate loan intent into risk scoring models to better predict repayment likelihood.
+- Prioritize education and venture loans with stronger repayment behavior.  
+- Reassess medical and debt consolidation loans; consider collateral, co-signers, or financial counseling.  
+- Integrate loan intent into risk scoring models to adjust approval thresholds and interest rates.
 
 ### Borrower Profile Strategy  
-- Target mid-tenure, married borrowers aged 35–54: They show the lowest default rates and strongest credit behavior.  
-- Apply tighter checks for youth and young adults, especially single renters with short credit histories and high loan-to-income ratios.  
-- Avoid over-penalizing gender: Default rates are nearly identical across male and female applicants.
+- Target mid-tenure, married borrowers aged 35–54 with tailored marketing and product bundles.  
+- Apply tighter checks for youth and young adults, especially single renters with short credit histories.  
+- Avoid gender-based assumptions in scoring models.
 
 ### Employment & Income  
-- Favor borrowers with 6–19 years of employment: They have the lowest default rates and highest median incomes.  
-- Flag early-career (0–2 years) and late-career (20+ years) applicants for additional review, as both groups show elevated risk despite income levels.
+- Favor borrowers with 6–19 years of employment; consider pre-approval campaigns.  
+- Flag early-career and late-career applicants for manual review.  
+- Assess retirement risk and income stability for 20+ year tenure applicants.
 
 ### Home Ownership & Affordability  
-- Renters are the highest-risk group: They carry the most debt and default most often.  
-- Mortgage holders and outright homeowners are more stable and should be prioritized in lending decisions.  
-- Use loan-to-income and debt-to-income ratios as key affordability indicators in approval workflows.
+- Introduce stricter affordability checks for renters: minimum income thresholds, lower loan-to-income caps, budgeting tools.  
+- Offer refinancing options and loyalty incentives for mortgage holders and homeowners.  
+- Use LTI and DTI ratios as gating criteria for approval.
 
 ### Loan Structure  
-- Grade A–C loans are the safest across all terms.  
-- Avoid long-term loans (60 months) for lower-grade borrowers (D–G), as default rates exceed 60% and reach 100% in Grade G.  
-- Cap risky loans at 36 months unless borrower profile is exceptionally strong.
+- Promote Grade A–C loans with longer terms and better rates.  
+- Cap term lengths at 36 months for Grades D–G; require stronger credit behavior or collateral for longer terms.  
+- Introduce dynamic term recommendations based on borrower profile and grade.
 
 ### Account Behavior  
-- Past delinquencies are consistent across age groups, but younger borrowers default more due to volume and financial instability.  
-- Use open account volume and delinquency history to refine risk scoring, especially for applicants under 35.
+- Use open account volume and delinquency history to refine risk scoring.  
+- Flag applicants with frequent delinquencies regardless of account volume.  
+- Offer credit-building products with lower exposure and educational support for younger applicants.
 
 ### Dashboard Enhancements  
-- Customer Details Table now includes a default status flag with conditional formatting and slicer-based filtering.  
-- This enables analysts and decision-makers to quickly isolate high-risk profiles and explore repayment behavior at the individual level.
+- Maintain the Customer Details Table with slicer-based filtering and conditional formatting.  
+- Add export functionality and calculated risk scores for audit and analyst teams.  
+- Integrate drill-through views to explore full credit history and repayment behavior per client.
 
+---
 
-
-
-
-
-
+## Conclusion  
+Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status
