@@ -205,6 +205,22 @@ Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to bot
 - **Older borrowers are more stable**, with longer credit histories and lower default rates.  
 - Nova Bank should apply stricter checks for youth and young adult segments, and consider prioritizing mid-age applicants for safer lending.
 
+## Loan Risk by Home Ownership  
+**How income ratios affect repayment across housing types**
+
+### Key Patterns
+
+- **Renters**: Highest default count (5,192). They borrow more relative to income and carry more debt.  
+- **Mortgage holders**: Lower loan and debt ratios, with fewer defaults (1,690).  
+- **Homeowners (own outright)**: Small group, low defaults (193).  
+- **Other housing**: Very small group, but defaults are high for their size.
+
+### Key Takeaways
+
+- **Renters are the riskiest group** — they borrow more and default more.  
+- **Mortgage holders and homeowners are more stable**.  
+- Nova Bank should be cautious with renters and check debt ratios closely before approving loans.
+
 
 
 
