@@ -173,6 +173,39 @@ At higher loan amounts ($16,000–$35,000), applications drop, but **default rat
 
 Nova Bank should prioritize mid-tenure borrowers and apply extra scrutiny to both early-career and late-career applicants.
 
+## Loan Risk by Age, Credit History & LTI  
+**How borrower age, credit history, and loan-to-income ratio affect default risk**
+
+### Key Patterns
+
+- **Youth (18–25)**:  
+  - Shortest credit history (2.99 years)  
+  - Highest LTI ratio (0.18)  
+  - Largest group: 12,315 applications, 2,860 defaults  
+  - **Insight**: High volume and high risk — younger borrowers are more likely to default.
+
+- **Young Adults (26–35)**:  
+  - Moderate credit history (5.97 years), LTI ratio 0.17  
+  - 16,185 applications, 3,393 defaults  
+  - **Insight**: Still high risk due to volume, but slightly better credit behavior.
+
+- **Adults (36–45)**:  
+  - Stronger credit history (12.73 years), lower LTI (0.16)  
+  - 3,326 applications, 684 defaults  
+  - **Insight**: More stable — lower default rate despite fewer applications.
+
+- **Older Age Groups (46+)**:  
+  - Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16)  
+  - Very few applications, very low defaults  
+  - **Insight**: Reliable borrowers, but small segment.
+
+### Key Takeaways
+
+- **Younger borrowers are the riskiest**, due to short credit history and higher LTI ratios.  
+- **Older borrowers are more stable**, with longer credit histories and lower default rates.  
+- Nova Bank should apply stricter checks for youth and young adult segments, and consider prioritizing mid-age applicants for safer lending.
+
+
 
 
 
