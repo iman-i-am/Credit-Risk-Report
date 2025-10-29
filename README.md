@@ -276,6 +276,42 @@ Conditional formatting is applied to the Client ID column for quick identificati
 
 This feature supports deeper analysis of borrower behavior and improves decision-making by surfacing high-risk profiles directly within the report.
 
+## Recommendations  
+Based on the uncovered insights, here are actionable steps Nova Bank can take to improve credit risk management and lending strategy.
+
+### Portfolio Health & Loan Intent  
+- Prioritize education and venture loans: These show the strongest repayment behavior and align with long-term income potential.  
+- Reassess medical and debt consolidation loans: These categories have the highest default rates and may require stricter approval criteria or revised interest terms.  
+- Incorporate loan intent into risk scoring models to better predict repayment likelihood.
+
+### Borrower Profile Strategy  
+- Target mid-tenure, married borrowers aged 35–54: They show the lowest default rates and strongest credit behavior.  
+- Apply tighter checks for youth and young adults, especially single renters with short credit histories and high loan-to-income ratios.  
+- Avoid over-penalizing gender: Default rates are nearly identical across male and female applicants.
+
+### Employment & Income  
+- Favor borrowers with 6–19 years of employment: They have the lowest default rates and highest median incomes.  
+- Flag early-career (0–2 years) and late-career (20+ years) applicants for additional review, as both groups show elevated risk despite income levels.
+
+### Home Ownership & Affordability  
+- Renters are the highest-risk group: They carry the most debt and default most often.  
+- Mortgage holders and outright homeowners are more stable and should be prioritized in lending decisions.  
+- Use loan-to-income and debt-to-income ratios as key affordability indicators in approval workflows.
+
+### Loan Structure  
+- Grade A–C loans are the safest across all terms.  
+- Avoid long-term loans (60 months) for lower-grade borrowers (D–G), as default rates exceed 60% and reach 100% in Grade G.  
+- Cap risky loans at 36 months unless borrower profile is exceptionally strong.
+
+### Account Behavior  
+- Past delinquencies are consistent across age groups, but younger borrowers default more due to volume and financial instability.  
+- Use open account volume and delinquency history to refine risk scoring, especially for applicants under 35.
+
+### Dashboard Enhancements  
+- Customer Details Table now includes a default status flag with conditional formatting and slicer-based filtering.  
+- This enables analysts and decision-makers to quickly isolate high-risk profiles and explore repayment behavior at the individual level.
+
+
 
 
 
