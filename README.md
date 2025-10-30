@@ -21,20 +21,21 @@ As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan a
 - **Affordability Ratios**: Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment capacity and flag over-leveraged applicants.  
 - **Loan Grade and Term Analysis**: Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
 
-## Dataset Structure  
-The database structure consists of five tables:  
-- **FactLoan** (central fact table with 32,581 records)  
-- **DimClient**  
-- **DimClientHistory**  
-- **DimLoanDetails**  
-- **DimLocation**  
-
-This star-schema model supports efficient slicing of borrower behavior, loan characteristics, and geographic trends.
-
 ## Database Schema
 
-![ERD Diagram](./images/"Credit Risk ERD.png")
+### Data Model Transformation
 
+The analytical foundation of this report involves transforming the original flat-file dataset (`credit_cleaned.xlsx`) into a structured **star schema** optimized for analytical queries and Power BI reporting.
+
+![ERD Diagram](./images/Credit%20Risk%20ERD.png)
+
+### Dataset Structure:
+- **Fact Table**: `FactLoan` - Contains loan performance metrics and keys to all dimensions
+- **Dimension Tables**:
+  - `DimClient` - Borrower demographic information (age, income, employment)
+  - `DimCreditHistory` - Credit background and financial history
+  - `DimLoanDetails` - Loan-specific terms and conditions
+  - `DimLocation` - Geographic data across USA, UK, and Canada
 
 ---
 
