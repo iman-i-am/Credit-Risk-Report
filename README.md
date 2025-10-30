@@ -31,6 +31,11 @@ The database structure consists of five tables:
 
 This star-schema model supports efficient slicing of borrower behavior, loan characteristics, and geographic trends.
 
+## Database Schema
+
+![ERD Diagram](./images/"Credit Risk ERD.png")
+
+
 ---
 
 ## Executive Summary  
