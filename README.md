@@ -39,10 +39,15 @@ The analytical foundation of this report involves transforming the original flat
 
 ---
 
-## Executive Summary  
-Nova Bank processed 32,851 loan applications totaling $312 million in requested loan amounts. The average loan was $9,589 with an interest rate of 11%, and borrowers typically requested loans worth 17% of their income. While 78% of loans were repaid, 22% defaulted — a meaningful exposure that warrants targeted policy adjustments.
+## Executive Summary
 
-This report explores the drivers of default risk across borrower demographics, loan structure, credit history, and regional patterns. It also highlights actionable strategies to improve lending decisions and reduce risk exposure.
+Nova Bank’s lending portfolio reflects strong demand and meaningful exposure. Over 30,000 applications have been processed, representing hundreds of millions in requested credit. Loan amounts typically exceed $9,000 per borrower, with repayment costs climbing higher due to interest. These figures stretch borrower affordability and amplify repayment pressure — especially among segments with elevated debt ratios and limited credit capacity.
+
+![Nova Bank KPI Overview](images/nova_kpis.pdf)
+
+Borrowers typically request loans worth 17% of their income, carry total debt equal to 35% of income, and use half of their available credit. While these ratios suggest moderate affordability overall, they also highlight pockets of financial strain that correlate with higher default risk.
+
+Despite a majority of loans being repaid, 1 in 5 defaults — exposing Nova Bank to substantial financial risk. These defaults are not random: they cluster around specific borrower profiles, loan structures, and credit behaviors. This report identifies those patterns and translates them into actionable recommendations that reduce losses, improve fairness, and align lending strategy with Nova Bank’s long-term objectives.
 
 ---
 
