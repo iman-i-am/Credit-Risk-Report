@@ -43,7 +43,7 @@ The analytical foundation of this report involves transforming the original flat
 
 Nova Bank’s lending portfolio reflects strong demand and meaningful exposure. Over 30,000 applications have been processed, representing hundreds of millions in requested credit. Loan amounts typically exceed $9,000 per borrower, with repayment costs climbing higher due to interest. These figures stretch borrower affordability and amplify repayment pressure — especially among segments with elevated debt ratios and limited credit capacity.
 
-![Nova Bank KPI Overview](images/nova_kpis.pdf)
+![Nova Bank KPI Overview](images/nova_kpis.png)
 
 Borrowers typically request loans worth 17% of their income, carry total debt equal to 35% of income, and use half of their available credit. While these ratios suggest moderate affordability overall, they also highlight pockets of financial strain that correlate with higher default risk.
 
