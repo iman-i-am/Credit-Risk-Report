@@ -70,11 +70,18 @@ Borrowers take loans for various reasons, but repayment behavior varies signific
 ---
 
 ### 2. Regional Risk Distribution  
-- **UK**: 10,944 applications, 2,378 defaults (22%). Scotland and Manchester show slightly higher risk.  
-- **USA**: 10,852 applications, 2,372 defaults (22%). California and Texas lead in defaults.  
-- **Canada**: 10,785 applications, 2,358 defaults (22%). Vancouver has the highest default rate.
 
-**Takeaway**: Default rates are consistent across countries, but urban centers carry more risk. Regional lending policies may need adjustment.
+Nova Bank’s lending activity is evenly distributed across its three core markets, with each region contributing roughly one-third of total applications and loan volume. However, subtle differences in application density and risk concentration reveal important strategic considerations:
+
+![Location](images/location.png)
+
+- **UK**: Leads slightly in application volume with **10,944 loans** totaling **$104.78M**. Scotland and Manchester show elevated default risk, suggesting regional affordability pressures despite strong demand.  
+- **USA**: Close behind with **10,852 applications** and **$103.67M** in loan volume. California and Texas account for the highest number of defaults, indicating concentrated risk in high-demand states.  
+- **Canada**: Slightly lower volume at **10,785 applications**, but with the **highest average loan size** ($9,641). Vancouver stands out with the most pronounced default rate, pointing to urban affordability strain.
+
+Each region reports a **22% default rate**, but the consistency masks localized risk clusters. Urban centers — particularly in the UK’s north, the US south and west, and Canada’s west coast — show disproportionate exposure.
+
+**Strategic Insight**: While national-level risk appears uniform, application density and default clustering suggest the need for **regionally adaptive lending policies**. Tailoring credit thresholds and affordability checks to urban conditions could reduce exposure without constraining growth in high-demand areas.
 
 ---
 
