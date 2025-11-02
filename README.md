@@ -143,6 +143,9 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 ---
 
 ### 6. Home Ownership & Affordability  
+
+![Home](images/home.png)
+
 - Renters: Highest default count (5,192), highest loan-to-income and debt-to-income ratios.  
 - Mortgage holders: Lower ratios and fewer defaults.  
 - Homeowners (own outright): Small group, lowest default rates.
