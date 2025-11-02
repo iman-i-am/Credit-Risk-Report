@@ -134,6 +134,9 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 ---
 
 ### 5. Credit History & Loan-to-Income Ratio  
+
+![History](images/history.png)
+
 - Youth (18–25): Shortest credit history (2.99 years), highest LTI ratio (0.18), highest default volume.  
 - Older borrowers (46+): Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16), lowest defaults.
 
