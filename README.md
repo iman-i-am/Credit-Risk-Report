@@ -124,6 +124,9 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 ---
 
 ### 4. Employment Tenure & Income  
+
+![Tenure](images/tenure.png)
+
 - Default risk drops as employment length increases — from 27% for those with less than 2 years to 13.4% for those with 16–19 years.  
 - Median income rises steadily with tenure, peaking at $70,000 for borrowers with 11–19 years of experience.  
 - Borrowers with 20+ years of experience show a higher default rate (24.5%) despite earning nearly as much.
