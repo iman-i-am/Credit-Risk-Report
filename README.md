@@ -5,6 +5,10 @@ This project analyzes loan application data from Nova Bank to uncover patterns i
 
 As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan applications using Python, addressing missing values, outliers, and feature engineering. The cleaned dataset was then exported to Excel and modeled in Power BI using a star-schema structure for dashboard development. This semantic model enables executive-level insights into borrower behavior, loan performance, and geographic risk segmentation.
 
+The static Power BI dashboard can be found [here](images/nova_credit.pdf).
+The Python data cleaning script is available [here](scripts/sept_credit_risk.ipynb).
+The cleaned dataset used for analysis is available [here](data/credit_cleaned.xlsx).
+
 ## Business Objectives  
 - Identify borrower groups more or less likely to default  
 - Explore how loan size, income, interest rates, and repayment terms affect risk  
@@ -174,4 +178,7 @@ Each region reports a **22% default rate**, but the consistency masks localized 
 ---
 
 ## Conclusion  
-Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status
+Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status.
+
+[Unamended Power BI report link here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+
