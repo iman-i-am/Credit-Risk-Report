@@ -164,6 +164,9 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 ---
 
 ### 8. Account Behavior  
+
+![Account](images/account.png)
+
 - Younger age groups (18–34) have the most defaults and slightly fewer open accounts.  
 - Delinquency rates are similar across all age groups (~0.50), except for ages 55–64 (0.37).  
 - Older borrowers (55+) have fewer defaults and slightly more open accounts.
