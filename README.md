@@ -92,6 +92,9 @@ Each region reports a **22% default rate**, but the consistency masks localized 
 ---
 
 ### 3. Borrower Demographics  
+
+![Gender](images/gender.png)
+
 - **Gender**: Default rates are nearly identical across male and female applicants.  
 - **Age**: Younger borrowers (18–35) dominate both applications and defaults. Older borrowers show lower default counts.  
 - **Marital Status**: Single borrowers show higher default volumes, while married borrowers are more stable.
@@ -182,5 +185,5 @@ Each region reports a **22% default rate**, but the consistency masks localized 
 ## Conclusion  
 Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status.
 
-[Unamended Power BI report link here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+[Unamended Power BI report weblink here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 
