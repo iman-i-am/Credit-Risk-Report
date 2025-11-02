@@ -5,9 +5,11 @@ This project analyzes loan application data from Nova Bank to uncover patterns i
 
 As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan applications using Python, addressing missing values, outliers, and feature engineering. The cleaned dataset was then exported to Excel and modeled in Power BI using a star-schema structure for dashboard development. This semantic model enables executive-level insights into borrower behavior, loan performance, and geographic risk segmentation.
 
-The static Power BI dashboard can be found [here](images/nova_credit.pdf).
-The Python data cleaning script is available [here](scripts/sept_credit_risk.ipynb).
-The cleaned dataset used for analysis is available [here](data/credit_cleaned.xlsx).
+The static Power BI dashboard can be found [here](nova_credit.pdf).
+
+The Python data cleaning script is available [here](sept_credit_risk.ipynb).
+
+The cleaned dataset used for analysis is available [here](credit_cleaned.xlsx).
 
 ## Business Objectives  
 - Identify borrower groups more or less likely to default  
