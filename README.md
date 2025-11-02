@@ -53,7 +53,7 @@ Nova Bank’s lending portfolio reflects strong demand and meaningful exposure. 
 
 Borrowers typically request loans worth 17% of their income, carry total debt equal to 35% of income, and use half of their available credit. While these ratios suggest moderate affordability overall, they also highlight pockets of financial strain that correlate with higher default risk.
 
-Despite a majority of loans being repaid, 1 in 5 defaults — exposing Nova Bank to substantial financial risk. These defaults are not random: they cluster around specific borrower profiles, loan structures, and credit behaviors. This report identifies those patterns and translates them into actionable recommendations that reduce losses, improve fairness, and align lending strategy with Nova Bank’s long-term objectives.
+Despite a majority of loans being repaid, 1 in 5 defaults — exposing Nova Bank to substantial financial risk. These defaults are not random: they cluster around specific borrower profiles, loan structures, and credit behaviors. 
 
 ---
 
