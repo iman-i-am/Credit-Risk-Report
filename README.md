@@ -152,7 +152,21 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 
 ---
 
-### 7. Loan Grade & Term  
+### 7. Loan Amount & Debt Class Insights
+
+Most loans fall between **$0–$16,000**, with a spike around **$4,000**, where application volume is highest. Very few loans exceed **$26,000**, and those show **much higher default rates**, especially among borrowers with moderate debt levels.
+
+Interestingly, borrowers with **low or moderate other debt** sometimes default more than those with high debt — suggesting that traditional debt class labels don’t always reflect true repayment risk.
+
+![Amount](images/loan_dist.png)
+ 
+- Mid-range loans drive volume and portfolio exposure  
+- High-value loans carry volatility and concentrated risk  
+- Debt class alone isn’t a reliable predictor — risk depends on how debt interacts with loan size
+
+---
+
+### 8. Loan Grade & Term  
 
 ![Grade](images/grade.png)
 
@@ -163,7 +177,7 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 
 ---
 
-### 8. Account Behavior  
+### 9. Account Behavior  
 
 ![Account](images/account.png)
 
@@ -173,10 +187,12 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 
 ---
 
-### 9. Dashboard Enhancements  
+### 10. Dashboard Enhancements  
 - Customer Details Table includes a default status flag with conditional formatting and slicer-based filtering.  
 - Defaulted customers are highlighted in red; non-defaulted in green.  
-- Enables deeper analysis of borrower behavior and supports decision-making.
+- Other slicer: check if client previously defaulted.
+
+![Table](images/table.png)
 
 ---
 
