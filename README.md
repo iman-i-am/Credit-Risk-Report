@@ -153,6 +153,9 @@ Single borrowers carry higher default risk, suggesting that marital status may b
 ---
 
 ### 7. Loan Grade & Term  
+
+![Grade](images/grade.png)
+
 - Grade A loans are the safest across all terms — default rates stay around 10%.  
 - Grades B and C show moderate risk (15–22%).  
 - Grades D to G are high-risk: Grade D defaults reach 60%+, Grade G defaults hit 100%.  
