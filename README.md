@@ -95,9 +95,31 @@ Each region reports a **22% default rate**, but the consistency masks localized 
 
 ![Gender](images/gender.png)
 
-- **Gender**: Default rates are nearly identical across male and female applicants.  
-- **Age**: Younger borrowers (18–35) dominate both applications and defaults. Older borrowers show lower default counts.  
-- **Marital Status**: Single borrowers show higher default volumes, while married borrowers are more stable.
+**Gender**
+
+Male applicants: 16,290 applications, 3,586 defaults → 22.0% default rate
+
+Female applicants: 16,561 applications, 3,522 defaults → 21.3% default rate
+
+Default rates are statistically similar across genders, suggesting no need for gender-based policy differentiation.
+
+**Age Group**
+
+18–35 years: 18,942 applications, 4,228 defaults → 22.3% default rate
+
+36–55 years: 10,214 applications, 2,212 defaults → 21.7% default rate
+
+56+ years: 3,695 applications, 668 defaults → 18.1% default rate 
+
+Younger borrowers dominate both applications and defaults. Older borrowers show lower risk, indicating stronger repayment behavior and potentially more stable financial profiles.
+
+**Marital Status**
+
+Single: 19,842 applications, 4,612 defaults → 23.2% default rate
+
+Married: 13,009 applications, 2,496 defaults → 19.2% default rate 
+
+Single borrowers carry higher default risk, suggesting that marital status may be a useful proxy for financial stability in credit scoring models.
 
 ---
 
