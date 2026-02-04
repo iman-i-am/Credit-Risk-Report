@@ -7,7 +7,7 @@ As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan a
 
 The static Power BI dashboard can be found [here](nova_credit.pdf).
 
-For on the spot insights, powerpoint available []().
+For on the spot insights, powerpoint available [](presentation.pdf).
 
 The Python data cleaning script is available [here](sept_credit_risk.ipynb).
 
