@@ -238,5 +238,5 @@ Interestingly, borrowers with **low or moderate other debt** sometimes default m
 ## Conclusion  
 Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status.
 
-[Unamended Power BI report weblink here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+[Interactive unamended Power BI report weblink here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 
