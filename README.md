@@ -18,30 +18,41 @@ The pipeline runs from raw data through Python cleaning and feature engineering,
 
 ---
 
-## Repository Structure
-
+## 🗂️ Repository Structure
 ```
 Credit-Risk-Report/
 │
-├── sept_credit_risk.ipynb      # Python data cleaning & EDA notebook (Google Colab)
-├── credit_cleaned.xlsx         # Cleaned dataset — star schema ready for Power BI
-├── nova_credit.pdf             # Static Power BI dashboard export
-├── presentation.pdf            # Executive presentation — quick insights
+├── data/
+│   ├── credit_risk.xlsx            # Raw dataset — 32,581 loan applications (29 columns)
+│   └── credit_cleaned.xlsx         # Cleaned dataset — star schema ready for Power BI (35 columns)
+│
+├── dashboard/
+│   ├── nova_credit.pbix            # Interactive Power BI report file
+│   └── nova_credit.pdf             # Static Power BI dashboard export
+│
+├── notebook/
+│   └── sept_credit_risk.ipynb      # Python data cleaning & EDA notebook (Google Colab)
+│
+├── presentation/
+│   └── presentation.pdf            # Executive presentation — quick insights
 │
 ├── images/
-│   ├── Credit Risk ERD.png     # Star schema entity relationship diagram
-│   ├── nova_kpis.png           # KPI overview screenshot
-│   ├── location.png            # Geographic risk distribution
-│   ├── gender.png              # Borrower demographics
-│   ├── tenure.png              # Employment tenure analysis
-│   ├── history.png             # Credit history & LTI ratios
-│   ├── home.png                # Home ownership & affordability
-│   ├── loan_dist.png           # Loan amount distribution
-│   ├── grade.png               # Loan grade & term analysis
-│   ├── account.png             # Account behaviour
-│   └── table.png               # Customer details table
+│   ├── Credit Risk ERD.png         # Star schema entity relationship diagram
+│   ├── nova_kpis.png               # KPI overview screenshot
+│   ├── location.png                # Geographic risk distribution
+│   ├── gender.png                  # Borrower demographics
+│   ├── tenure.png                  # Employment tenure analysis
+│   ├── history.png                 # Credit history & LTI ratios
+│   ├── home.png                    # Home ownership & affordability
+│   ├── loan_dist.png               # Loan amount distribution
+│   ├── grade.png                   # Loan grade & term analysis
+│   ├── account.png                 # Account behaviour
+│   └── table.png                   # Customer details table
 │
 └── README.md
+```
+
+> **Data:** The raw dataset (`credit_risk.xlsx`) is provided for reproducibility. Download and place in the `data/` folder before running the notebook.
 ```
 
 ---
