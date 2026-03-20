@@ -1,244 +1,317 @@
 # Credit Risk Analytics for Smarter Lending Decisions
 
-## Project Overview  
-This project analyzes loan application data from Nova Bank to uncover patterns in borrower behavior and default risk across the USA, UK, and Canada. The goal is to support fair, data-driven lending policies that balance accessibility with financial protection.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Domain](https://img.shields.io/badge/Domain-Credit%20Risk%20%7C%20Financial%20Services-2D6A4F?style=for-the-badge)
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 
-As a credit risk analyst, I cleaned and prepared a dataset of over 32,000 loan applications using Python, addressing missing values, outliers, and feature engineering. The cleaned dataset was then exported to Excel and modeled in Power BI using a star-schema structure for dashboard development. This semantic model enables executive-level insights into borrower behavior, loan performance, and geographic risk segmentation.
+---
 
-[Static Power BI dashboard](nova_credit.pdf)
+## 📌 Overview
 
-[Presentation for quick insights](presentation.pdf)
+This project analyses loan application data from Nova Bank to uncover patterns in borrower behaviour and default risk across the USA, UK, and Canada. The goal is to support fair, data-driven lending policies that balance accessibility with financial protection.
 
-[Python data cleaning script](sept_credit_risk.ipynb)
+The pipeline runs from raw data through Python cleaning and feature engineering, into a structured star schema in Excel, and finally into an interactive Power BI dashboard designed for executive and analyst audiences alike.
 
-[Cleaned dataset for analysis](credit_cleaned.xlsx)
+**Source:** [DataDNA September Challenge](https://www.linkedin.com/company/datasolveddna/) — a monthly real-world data analytics challenge.
 
-## Business Objectives  
-- Identify borrower groups more or less likely to default  
-- Explore how loan size, income, interest rates, and repayment terms affect risk  
-- Assess the impact of employment type, home ownership, and credit history  
-- Compare risk patterns across countries (USA, UK, Canada)  
+---
+
+## 🗂️ Repository Structure
+
+```
+Credit-Risk-Report/
+│
+├── sept_credit_risk.ipynb      # Python data cleaning & EDA notebook (Google Colab)
+├── credit_cleaned.xlsx         # Cleaned dataset — star schema ready for Power BI
+├── nova_credit.pdf             # Static Power BI dashboard export
+├── presentation.pdf            # Executive presentation — quick insights
+│
+├── images/
+│   ├── Credit Risk ERD.png     # Star schema entity relationship diagram
+│   ├── nova_kpis.png           # KPI overview screenshot
+│   ├── location.png            # Geographic risk distribution
+│   ├── gender.png              # Borrower demographics
+│   ├── tenure.png              # Employment tenure analysis
+│   ├── history.png             # Credit history & LTI ratios
+│   ├── home.png                # Home ownership & affordability
+│   ├── loan_dist.png           # Loan amount distribution
+│   ├── grade.png               # Loan grade & term analysis
+│   ├── account.png             # Account behaviour
+│   └── table.png               # Customer details table
+│
+└── README.md
+```
+
+---
+
+## 🎯 Business Objectives
+
+- Identify borrower groups more or less likely to default
+- Explore how loan size, income, interest rates, and repayment terms affect risk
+- Assess the impact of employment type, home ownership, and credit history
+- Compare risk patterns across countries (USA, UK, Canada)
 - Recommend policy adjustments to improve lending fairness and reduce exposure
 
-## Nova Bank Key Metrics  
-- **Default Risk Trends**: Tracking the proportion of loans that default across borrower segments, loan types, and time periods to identify high-risk patterns and early warning signals.  
-- **Loan Portfolio Performance**: Analyzing loan amounts, interest rates, repayment terms, and total loan cost to assess profitability and exposure across different loan grades and purposes.  
-- **Borrower Profile Insights**: Evaluating demographic and financial indicators—such as age, income, employment type, and home ownership—to understand which borrower groups are more likely to repay or default.  
-- **Credit History Evaluation**: Measuring the impact of credit history length, past delinquencies, open accounts, and credit utilization on loan outcomes to refine risk scoring models.  
-- **Geographic Risk Distribution**: Comparing default rates and borrower behavior across the USA, UK, and Canada to uncover regional lending risks and opportunities for policy adjustment.  
-- **Affordability Ratios**: Monitoring loan-to-income and debt-to-income ratios to assess borrower repayment capacity and flag over-leveraged applicants.  
-- **Loan Grade and Term Analysis**: Identifying which loan grades and repayment terms correlate with safer lending outcomes, helping Nova Bank optimize its product offerings.
+---
 
-## Database Schema
+## 🗃️ Dataset
 
-### Data Model Transformation
+**Source:** DataDNA September Challenge — synthetic loan application dataset modelled on real-world lending data.
 
-The analytical foundation of this report involves transforming the original flat-file dataset (`credit_cleaned.xlsx`) into a structured **star schema** optimized for analytical queries and Power BI reporting.
+| File | Rows | Columns | Description |
+|---|---|---|---|
+| `credit_risk.xlsx` | 32,581 | 29 | Raw loan application data |
+| `credit_cleaned.xlsx` | 32,581 | 32 | Cleaned and feature-engineered output |
+
+---
+
+## 🐍 Python — Data Cleaning & Feature Engineering
+
+The raw dataset contained two columns with missing values and several data quality issues that required treatment before modelling could begin.
+
+**Missing values identified and resolved:**
+
+| Column | Missing % | Treatment |
+|---|---|---|
+| `loan_int_rate` | 9.56% | Median imputation by loan grade |
+| `person_emp_length` | 2.75% | Median imputation (median = 4.0 years) |
+
+**Outlier treatment:**
+
+- `person_emp_length` — 5 records contained employment lengths above 60 years (biologically implausible for the age distribution). These were set to NaN and subsequently imputed.
+- `person_age` — 5 records contained ages above 100 years. These were identified and replaced with the dataset median of 26 years.
+
+**Feature engineering — 3 new columns added:**
+
+- `age_group` — binned age into 6 groups (18–24, 25–34, 35–44, 45–54, 55–64, 65+) using `pd.cut()`
+- `age_class` — labelled groups as Youth, Young Adult, Adult, Middle Age, Senior, Elderly for readability in Power BI
+- `total_loan_cost` — engineered as `loan_amnt × (1 + (loan_int_rate/100) × (loan_term_months/12))` to capture the full repayment burden including interest
+
+**EDA — correlation analysis:**
+
+A full correlation matrix identified three highly correlated feature pairs worth noting for model development:
+
+- `loan_percent_income` and `loan_to_income_ratio` — 0.999 correlation (near-duplicate metrics)
+- `loan_amnt` and `total_loan_cost` — 0.970 correlation (expected — cost is derived from amount)
+- `person_income` and `other_debt` — 0.887 correlation (higher earners carry more absolute debt)
+
+Final cleaned dataset: **32,581 rows × 32 columns**, exported to `credit_cleaned.xlsx` for Power BI modelling.
+
+---
+
+## 🗄️ Database Schema
+
+### Star Schema — Power BI Data Model
+
+The cleaned flat file was restructured into a star schema to enable efficient analytical queries and clean Power BI relationships.
 
 ![ERD Diagram](./images/Credit%20Risk%20ERD.png)
 
-### Dataset Structure:
-- **Fact Table**: `FactLoan` - Contains loan performance metrics and keys to all dimensions
-- **Dimension Tables**:
-  - `DimClient` - Borrower demographic information (age, income, employment)
-  - `DimCreditHistory` - Credit background and financial history
-  - `DimLoanDetails` - Loan-specific terms and conditions
-  - `DimLocation` - Geographic data across USA, UK, and Canada
+| Table | Type | Description |
+|---|---|---|
+| `FactLoan` | Fact | Loan performance metrics and foreign keys to all dimensions |
+| `DimClient` | Dimension | Borrower demographics — age, income, employment |
+| `DimCreditHistory` | Dimension | Credit background and financial history |
+| `DimLoanDetails` | Dimension | Loan-specific terms, grade, and conditions |
+| `DimLocation` | Dimension | Geographic data across USA, UK, and Canada |
 
 ---
 
-## Executive Summary
+## 📊 Executive Summary
 
-Nova Bank’s lending portfolio reflects strong demand and meaningful exposure. Over 30,000 applications have been processed, representing hundreds of millions in requested credit. Loan amounts typically exceed $9,000 per borrower, with repayment costs climbing higher due to interest. These figures stretch borrower affordability and amplify repayment pressure — especially among segments with elevated debt ratios and limited credit capacity.
+![KPI Overview](images/nova_kpis.png)
 
-![Nova Bank KPI Overview](images/nova_kpis.png)
+Nova Bank processed **32,851 loan applications** totalling **$312 million** in requested credit. The average loan was **$9,589** at an average interest rate of **11%**. Borrowers typically requested loans worth 17% of their annual income, carry total debt equal to 35% of income, and use approximately half of their available credit.
 
-Borrowers typically request loans worth 17% of their income, carry total debt equal to 35% of income, and use half of their available credit. While these ratios suggest moderate affordability overall, they also highlight pockets of financial strain that correlate with higher default risk.
-
-Despite a majority of loans being repaid, 1 in 5 defaults — exposing Nova Bank to substantial financial risk. These defaults are not random: they cluster around specific borrower profiles, loan structures, and credit behaviors. 
+While **78% of loans were repaid**, **1 in 5 defaulted** — a meaningful exposure that clusters around specific borrower profiles, loan structures, and credit behaviours rather than being randomly distributed across the portfolio.
 
 ---
 
-## Key Findings
+## 🔍 Key Findings
 
-### 1. Loan Intent & Repayment Behavior  
-Borrowers take loans for various reasons, but repayment behavior varies significantly by intent:
+### 1. Loan Intent & Repayment Behaviour
 
-| Loan Purpose         | % of Defaults | % of Non-Defaults | Insight |
-|----------------------|----------------|--------------------|---------|
-| Medical              | 22.81%         | 17.47%             | Highest defaulted — medical loans carry the most risk. |
-| Debt Consolidation   | 20.96%         | 14.61%             | Common reason for borrowing, but repayment is below average. |
-| Education            | 15.63%         | 20.97%             | Strong repayment — education borrowers are more reliable. |
-| Personal             | 15.45%         | 17.36%             | Mid-range risk, slightly better than average. |
-| Venture              | 11.92%         | 19.13%             | High repayment — venture loans show strong performance. |
-| Home Improvement     | 13.24%         | 10.46%             | Lower volume, moderate risk. |
+| Loan Purpose | % of Defaults | % of Non-Defaults | Risk Level |
+|---|---|---|---|
+| Medical | 22.81% | 17.47% | 🔴 Highest risk |
+| Debt Consolidation | 20.96% | 14.61% | 🔴 Above average |
+| Personal | 15.45% | 17.36% | 🟡 Moderate |
+| Home Improvement | 13.24% | 10.46% | 🟡 Moderate |
+| Education | 15.63% | 20.97% | 🟢 Lower risk |
+| Venture | 11.92% | 19.13% | 🟢 Lowest risk |
 
-**Takeaway**: Education and venture loans are the most promising segments. Medical and debt consolidation loans require tighter controls.
-
----
-
-### 2. Regional Risk Distribution  
-
-Nova Bank’s lending activity is evenly distributed across its three core markets, with each region contributing roughly one-third of total applications and loan volume. However, subtle differences in application density and risk concentration reveal important strategic considerations:
-
-![Location](images/location.png)
-
-- **UK**: Leads slightly in application volume with **10,944 loans** totaling **$104.78M**. Scotland and Manchester show elevated default risk, suggesting regional affordability pressures despite strong demand.  
-- **USA**: Close behind with **10,852 applications** and **$103.67M** in loan volume. California and Texas account for the highest number of defaults, indicating concentrated risk in high-demand states.  
-- **Canada**: Slightly lower volume at **10,785 applications**, but with the **highest average loan size** ($9,641). Vancouver stands out with the most pronounced default rate, pointing to urban affordability strain.
-
-Each region reports a **22% default rate**, but the consistency masks localized risk clusters. Urban centers — particularly in the UK’s north, the US south and west, and Canada’s west coast — show disproportionate exposure.
-
-**Strategic Insight**: While national-level risk appears uniform, application density and default clustering suggest the need for **regionally adaptive lending policies**. Tailoring credit thresholds and affordability checks to urban conditions could reduce exposure without constraining growth in high-demand areas.
+> **Takeaway:** Education and venture loans are the most promising segments. Medical and debt consolidation loans require tighter controls or collateral requirements.
 
 ---
 
-### 3. Borrower Demographics  
+### 2. Regional Risk Distribution
 
-![Gender](images/gender.png)
+![Geographic Risk](images/location.png)
 
-**Gender**
+Each of the three markets contributes roughly one-third of total applications, with near-identical 22% default rates at the national level. However, localised risk clusters emerge within each region:
 
-Male applicants: 16,290 applications, 3,586 defaults → 22.0% default rate
+- **UK** — 10,944 loans · $104.78M · Scotland and Manchester show elevated risk
+- **USA** — 10,852 loans · $103.67M · California and Texas account for highest defaults
+- **Canada** — 10,785 loans · $95.4M · Vancouver shows the most pronounced default rate
 
-Female applicants: 16,561 applications, 3,522 defaults → 21.3% default rate
-
-Default rates are statistically similar across genders, suggesting no need for gender-based policy differentiation.
-
-**Age Group**
-
-18–35 years: 18,942 applications, 4,228 defaults → 22.3% default rate
-
-36–55 years: 10,214 applications, 2,212 defaults → 21.7% default rate
-
-56+ years: 3,695 applications, 668 defaults → 18.1% default rate 
-
-Younger borrowers dominate both applications and defaults. Older borrowers show lower risk, indicating stronger repayment behavior and potentially more stable financial profiles.
-
-**Marital Status**
-
-Single: 19,842 applications, 4,612 defaults → 23.2% default rate
-
-Married: 13,009 applications, 2,496 defaults → 19.2% default rate 
-
-Single borrowers carry higher default risk, suggesting that marital status may be a useful proxy for financial stability in credit scoring models.
+> **Strategic Insight:** National-level uniformity masks urban concentration risk. Regionally adaptive lending policies — particularly for urban centres — could reduce exposure without constraining growth.
 
 ---
 
-### 4. Employment Tenure & Income  
+### 3. Borrower Demographics
 
-![Tenure](images/tenure.png)
+![Demographics](images/gender.png)
 
-- Default risk drops as employment length increases — from 27% for those with less than 2 years to 13.4% for those with 16–19 years.  
-- Median income rises steadily with tenure, peaking at $70,000 for borrowers with 11–19 years of experience.  
-- Borrowers with 20+ years of experience show a higher default rate (24.5%) despite earning nearly as much.
+**Gender** — default rates are statistically similar (Male: 22.0%, Female: 21.3%). Gender should not be a policy differentiator.
 
----
+**Age Group:**
 
-### 5. Credit History & Loan-to-Income Ratio  
+| Age Group | Applications | Defaults | Default Rate |
+|---|---|---|---|
+| 18–35 | 18,942 | 4,228 | 22.3% |
+| 36–55 | 10,214 | 2,212 | 21.7% |
+| 56+ | 3,695 | 668 | 18.1% |
 
-![History](images/history.png)
-
-- Youth (18–25): Shortest credit history (2.99 years), highest LTI ratio (0.18), highest default volume.  
-- Older borrowers (46+): Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16), lowest defaults.
-
----
-
-### 6. Home Ownership & Affordability  
-
-![Home](images/home.png)
-
-- Renters: Highest default count (5,192), highest loan-to-income and debt-to-income ratios.  
-- Mortgage holders: Lower ratios and fewer defaults.  
-- Homeowners (own outright): Small group, lowest default rates.
+**Marital Status** — Single borrowers carry a 23.2% default rate vs 19.2% for married borrowers — a 4 percentage point gap worth incorporating into risk scoring.
 
 ---
 
-### 7. Loan Amount & Debt Class Insights
+### 4. Employment Tenure & Income
 
-Most loans fall between **$0–$16,000**, with a spike around **$4,000**, where application volume is highest. Very few loans exceed **$26,000**, and those show **much higher default rates**, especially among borrowers with moderate debt levels.
+![Employment Tenure](images/tenure.png)
 
-Interestingly, borrowers with **low or moderate other debt** sometimes default more than those with high debt — suggesting that traditional debt class labels don’t always reflect true repayment risk.
+Default risk drops consistently as employment length increases — from **27% for borrowers with under 2 years** of experience to **13.4% for those with 16–19 years**. Median income peaks at $70,000 for the 11–19 year tenure group.
 
-![Amount](images/loan_dist.png)
- 
-- Mid-range loans drive volume and portfolio exposure  
-- High-value loans carry volatility and concentrated risk  
-- Debt class alone isn’t a reliable predictor — risk depends on how debt interacts with loan size
+One notable exception: borrowers with **20+ years of tenure show a higher default rate (24.5%)** despite strong incomes — likely driven by retirement transition risk and reduced income stability.
 
 ---
 
-### 8. Loan Grade & Term  
+### 5. Credit History & Loan-to-Income Ratio
 
-![Grade](images/grade.png)
+![Credit History](images/history.png)
 
-- Grade A loans are the safest across all terms — default rates stay around 10%.  
-- Grades B and C show moderate risk (15–22%).  
-- Grades D to G are high-risk: Grade D defaults reach 60%+, Grade G defaults hit 100%.  
-- Shorter terms (12–36 months) tend to have slightly lower default rates, especially in riskier grades.
+- Youth (18–25): Shortest credit history (2.99 years), highest LTI ratio (0.18), highest default volume
+- Older borrowers (46+): Longest credit history (16–24 years), lowest LTI ratios (0.15–0.16), fewest defaults
 
 ---
 
-### 9. Account Behavior  
+### 6. Home Ownership & Affordability
 
-![Account](images/account.png)
+![Home Ownership](images/home.png)
 
-- Younger age groups (18–34) have the most defaults and slightly fewer open accounts.  
-- Delinquency rates are similar across all age groups (~0.50), except for ages 55–64 (0.37).  
-- Older borrowers (55+) have fewer defaults and slightly more open accounts.
-
----
-
-### 10. Dashboard Enhancements  
-- Customer Details Table includes a default status flag with conditional formatting and slicer-based filtering.  
-- Defaulted customers are highlighted in red; non-defaulted in green.  
-- Other slicer: check if client previously defaulted.
-
-![Table](images/table.png)
+| Ownership Type | Default Count | Risk Profile |
+|---|---|---|
+| Renter | 5,192 | 🔴 Highest — elevated LTI and DTI |
+| Mortgage | Lower | 🟡 Moderate |
+| Outright Owner | Lowest | 🟢 Most stable |
 
 ---
 
-## Recommendations
+### 7. Loan Amount Distribution
 
-### Portfolio Health & Loan Intent  
-- Prioritize education and venture loans with stronger repayment behavior.  
-- Reassess medical and debt consolidation loans; consider collateral, co-signers, or financial counseling.  
-- Integrate loan intent into risk scoring models to adjust approval thresholds and interest rates.
+![Loan Distribution](images/loan_dist.png)
 
-### Borrower Profile Strategy  
-- Target mid-tenure, married borrowers aged 35–54 with tailored marketing and product bundles.  
-- Apply tighter checks for youth and young adults, especially single renters with short credit histories.  
-- Avoid gender-based assumptions in scoring models.
-
-### Employment & Income  
-- Favor borrowers with 6–19 years of employment; consider pre-approval campaigns.  
-- Flag early-career and late-career applicants for manual review.  
-- Assess retirement risk and income stability for 20+ year tenure applicants.
-
-### Home Ownership & Affordability  
-- Introduce stricter affordability checks for renters: minimum income thresholds, lower loan-to-income caps, budgeting tools.  
-- Offer refinancing options and loyalty incentives for mortgage holders and homeowners.  
-- Use LTI and DTI ratios as gating criteria for approval.
-
-### Loan Structure  
-- Promote Grade A–C loans with longer terms and better rates.  
-- Cap term lengths at 36 months for Grades D–G; require stronger credit behavior or collateral for longer terms.  
-- Introduce dynamic term recommendations based on borrower profile and grade.
-
-### Account Behavior  
-- Use open account volume and delinquency history to refine risk scoring.  
-- Flag applicants with frequent delinquencies regardless of account volume.  
-- Offer credit-building products with lower exposure and educational support for younger applicants.
-
-### Dashboard Enhancements  
-- Maintain the Customer Details Table with slicer-based filtering and conditional formatting.  
-- Add export functionality and calculated risk scores for audit and analyst teams.  
-- Integrate drill-through views to explore full credit history and repayment behavior per client.
+Most loans fall between **$0–$16,000** with the highest application volume around **$4,000**. Loans exceeding **$26,000** show significantly higher default rates. Notably, borrowers with low or moderate other debt sometimes default at higher rates than those with high debt — suggesting that debt class alone is not a reliable predictor and should be assessed in combination with loan size and income.
 
 ---
 
-## Conclusion  
-Nova Bank’s credit risk landscape reveals clear patterns in borrower behavior, loan structure, and repayment outcomes. By aligning lending policies with these insights—especially around borrower age, employment tenure, loan intent, and housing status.
+### 8. Loan Grade & Term
 
-[Interactive unamended Power BI report weblink here](https://app.powerbi.com/view?r=eyJrIjoiZWIyMTVjOWYtYjNhNC00M2YxLWJhYzYtZTk3YWE4OWZhZDAzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+![Loan Grade](images/grade.png)
 
+| Grade | Risk Level | Default Rate |
+|---|---|---|
+| A | 🟢 Safest | ~10% across all terms |
+| B–C | 🟡 Moderate | 15–22% |
+| D | 🔴 High risk | 60%+ |
+| E–G | 🔴 Very high | Up to 100% |
+
+Shorter terms (12–36 months) consistently outperform longer terms for grades D and below.
+
+---
+
+### 9. Account Behaviour
+
+![Account Behaviour](images/account.png)
+
+Delinquency rates are consistent across most age groups (~0.50), with the exception of borrowers aged 55–64 (0.37). Younger borrowers generate higher absolute default numbers due to application volume, not significantly higher per-borrower risk rates.
+
+---
+
+### 10. Dashboard Features
+
+![Customer Table](images/table.png)
+
+- Customer Details Table with conditional formatting — defaulted clients highlighted in red, non-defaulted in green
+- Slicer-based filtering by default status, region, loan grade, and borrower profile
+- Drill-through views for individual client credit history and repayment behaviour
+
+---
+
+## 💡 Recommendations
+
+**Portfolio & Loan Intent**
+- Prioritise education and venture loans — stronger repayment behaviour
+- Apply tighter controls on medical and debt consolidation — collateral, co-signers, or financial counselling
+- Integrate loan intent as a variable in risk scoring models
+
+**Borrower Profile**
+- Target mid-tenure, married borrowers aged 35–54 with tailored products
+- Apply stricter affordability checks for single renters aged 18–35 with short credit histories
+- No gender-based assumptions in scoring — rates are statistically equivalent
+
+**Employment & Income**
+- Favour borrowers with 6–19 years of tenure for pre-approval campaigns
+- Flag early-career (<2 years) and late-career (20+ years) applicants for manual review
+- Assess retirement income stability separately for 20+ year tenure borrowers
+
+**Loan Structure**
+- Promote Grade A–C loans with longer terms
+- Cap Grade D–G loans at 36 months maximum
+- Use LTI and DTI ratios as hard gating criteria for approval — not advisory metrics
+
+**Account Behaviour**
+- Weight delinquency history in risk scoring regardless of age group
+- Offer credit-building products with lower exposure limits for younger applicants
+
+---
+
+## ⚠️ Limitations
+
+- Dataset is synthetic — patterns may not perfectly reflect real-world lending distributions
+- No time dimension in the data — default rates cannot be tracked as a trend over time
+- Counterfactual analysis is not possible — we cannot know how borrowers would have performed under different loan structures
+
+---
+
+## 🚀 How to Run
+
+1. Open `sept_credit_risk.ipynb` in Google Colab or Jupyter
+2. Upload `credit_risk.xlsx` as the raw input
+3. Run all cells — the cleaned file `credit_cleaned.xlsx` is produced as output
+4. Import `credit_cleaned.xlsx` into Power BI and apply the star schema relationships
+5. View the live interactive dashboard via the badge at the top of this README
+
+---
+
+## 📦 Dependencies
+
+```
+pandas
+numpy
+matplotlib
+seaborn
+openpyxl
+```
+
+---
+
+## 🌍 Context
+
+This project was built as part of the **DataDNA September Challenge** — a monthly community-driven analytics challenge designed to develop real-world data skills through practical, business-grounded datasets.
+
+---
+
+*Dataset provided by DataDNA for educational and portfolio purposes. All analysis is original work.*
