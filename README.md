@@ -18,7 +18,7 @@ The pipeline runs from raw data through Python cleaning and feature engineering,
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 ```
 Credit-Risk-Report/
 │
@@ -57,6 +57,15 @@ Credit-Risk-Report/
 
 ---
 
+## Problem Statement
+
+Nova Bank faces a fundamental tension at the heart of its lending business: approve too many high-risk loans and the bank absorbs significant financial losses — approve too few and it alienates creditworthy customers while failing its mission of fair, accessible lending.
+
+With a **21.8% default rate** across 32,581 loan applications, 1 in 5 borrowers is failing to repay. These defaults are not randomly distributed — they cluster around specific borrower profiles, loan structures, and geographic patterns that standard approval processes are not currently capturing effectively.
+
+The core challenge is building a data-driven understanding of *who* defaults, *why* they default, and *which lending policy levers* can reduce exposure without restricting access to credit for borrowers who would repay.
+
+---
 ## Business Objectives
 
 - Identify borrower groups more or less likely to default
