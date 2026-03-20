@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project analyses loan application data from Nova Bank to uncover patterns in borrower behaviour and default risk across the USA, UK, and Canada. The goal is to support fair, data-driven lending policies that balance accessibility with financial protection.
 
@@ -18,7 +18,7 @@ The pipeline runs from raw data through Python cleaning and feature engineering,
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 Credit-Risk-Report/
@@ -46,7 +46,7 @@ Credit-Risk-Report/
 
 ---
 
-## 🎯 Business Objectives
+## Business Objectives
 
 - Identify borrower groups more or less likely to default
 - Explore how loan size, income, interest rates, and repayment terms affect risk
@@ -56,7 +56,7 @@ Credit-Risk-Report/
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 **Source:** DataDNA September Challenge — synthetic loan application dataset modelled on real-world lending data.
 
@@ -67,7 +67,7 @@ Credit-Risk-Report/
 
 ---
 
-## 🐍 Python — Data Cleaning & Feature Engineering
+## Python — Data Cleaning & Feature Engineering
 
 The raw dataset contained two columns with missing values and several data quality issues that required treatment before modelling could begin.
 
@@ -101,7 +101,7 @@ Final cleaned dataset: **32,581 rows × 32 columns**, exported to `credit_cleane
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Star Schema — Power BI Data Model
 
@@ -119,7 +119,7 @@ The cleaned flat file was restructured into a star schema to enable efficient an
 
 ---
 
-## 📊 Executive Summary
+## Executive Summary
 
 ![KPI Overview](images/nova_kpis.png)
 
@@ -129,7 +129,7 @@ While **78% of loans were repaid**, **1 in 5 defaulted** — a meaningful exposu
 
 ---
 
-## 🔍 Key Findings
+## Key Findings
 
 ### 1. Loan Intent & Repayment Behaviour
 
@@ -250,7 +250,7 @@ Delinquency rates are consistent across most age groups (~0.50), with the except
 
 ---
 
-## 💡 Recommendations
+## Recommendations
 
 **Portfolio & Loan Intent**
 - Prioritise education and venture loans — stronger repayment behaviour
@@ -278,7 +278,7 @@ Delinquency rates are consistent across most age groups (~0.50), with the except
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Dataset is synthetic — patterns may not perfectly reflect real-world lending distributions
 - No time dimension in the data — default rates cannot be tracked as a trend over time
@@ -286,7 +286,7 @@ Delinquency rates are consistent across most age groups (~0.50), with the except
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Open `sept_credit_risk.ipynb` in Google Colab or Jupyter
 2. Upload `credit_risk.xlsx` as the raw input
@@ -296,7 +296,7 @@ Delinquency rates are consistent across most age groups (~0.50), with the except
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ```
 pandas
@@ -308,7 +308,7 @@ openpyxl
 
 ---
 
-## 🌍 Context
+## Context
 
 This project was built as part of the **DataDNA September Challenge** — a monthly community-driven analytics challenge designed to develop real-world data skills through practical, business-grounded datasets.
 
