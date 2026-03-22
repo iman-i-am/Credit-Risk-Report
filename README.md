@@ -12,7 +12,7 @@
 
 This project analyses loan application data from Nova Bank to uncover patterns in borrower behaviour and default risk across the USA, UK, and Canada. The goal is to support fair, data-driven lending policies that balance accessibility with financial protection.
 
-The pipeline runs from raw data through Python cleaning and feature engineering, into a structured star schema in Excel, and finally into an interactive Power BI dashboard designed for executive and analyst audiences alike.
+The pipeline runs from raw data through Python cleaning and feature engineering, into a structured star schema and an interactive Power BI dashboard designed for executive and analyst audiences alike.
 
 **Source:** [DataDNA September Challenge](https://datadna.onyxdata.co.uk/challenges/september-2025-datadna-credit-risk-analytics-challenge/) — a monthly real-world data analytics challenge.
 
