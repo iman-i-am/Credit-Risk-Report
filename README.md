@@ -53,7 +53,6 @@ Credit-Risk-Report/
 ```
 
 > **Data:** The raw dataset (`credit_risk.xlsx`) is provided for reproducibility. Download and place in the `data/` folder before running the notebook.
-```
 
 ---
 
